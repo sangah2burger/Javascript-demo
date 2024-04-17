@@ -1,0 +1,72 @@
+/* 4. 주 메뉴 배치 스타일 */
+.header ul{
+    list-style-type: none;
+    border: 1px solid lightgray;
+    background: #ffffff;
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+}
+.header li{
+    float: left;
+}
+.header li:last-child /* 마지막넘 */ {
+    float: right;
+}
+/* 5. 주 메뉴 링크 스타일 */
+.header li > a{ /* 자식 선택할 때 > */
+    display: inline-block;
+    text-align: center;
+    color: #242c42;
+    text-decoration: none; /* 텍스트 밑줄 없애기 */
+    padding: 14px 16px; /* 글자간 좌우 여백 */
+}
+.header li > a.active /* .active로 써도 됨 */ {
+    color: white;
+    background-color: skyblue;
+}
+.header li > a:hover:not(.active){ /* 마우스를 올렸을 때 나타나는 색깔 :not > 빼고 바꿀 부분 지정 */
+    background-color: lightgreen;
+}
+
+    /* 6. 하위 메뉴 스타일 */
+.header .dropdown_content{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 8px rlba(0,0,0,0.2);
+    z-index: 2; /* 상대적으로 앞에 있도록(내용 가리지 않게) */
+}
+.header .dropdown:hover .dropdown_content /* 마우스 갖다대면 보이게 */ {
+    display: block;
+}
+.header .dropdown_content > a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    padding: 12px 16px;
+}
+.header .dropdown_content > a:hover {
+    background-color: lightseagreen;
+    color: white;
+}
+/* 7. 로그인 하위 메뉴 스타일 */
+.header .dropdown_content > input {
+    width: 100px;
+    color: black;
+    text-decoration: none;
+    display : block;
+    text-align: left;
+    padding: 12px 30px;
+}
+/* 8. 바닥글 스타일 */
+.footer {
+    color: black;
+    clear: both;
+    text-align: center;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    font-size: small;
+}
